@@ -1,0 +1,85 @@
+reynaera@im2ag-hadoop-01:~$ hadoop jar /usr/local/hadoop/share/hadoop/tools/liboop-streaming-3.1.2.jar -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -numReduceTasks 3 -input /data/miserables -output multi_reducer_wc
+packageJobJar: [/tmp/hadoop-unjar7441673526961147072/] [] /tmp/streamjob3342634636825166058.jar tmpDir=null
+2020-10-19 15:02:39,068 INFO client.RMProxy: Connecting to ResourceManager at /152.77.81.30:8032
+2020-10-19 15:02:39,262 INFO client.RMProxy: Connecting to ResourceManager at /152.77.81.30:8032
+2020-10-19 15:02:39,539 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/reynaera/.staging/job_1603111422479_0024
+2020-10-19 15:02:39,968 INFO mapred.FileInputFormat: Total input files to process : 5
+2020-10-19 15:02:40,074 INFO mapreduce.JobSubmitter: number of splits:5
+2020-10-19 15:02:40,246 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1603111422479_0024
+2020-10-19 15:02:40,247 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2020-10-19 15:02:40,418 INFO conf.Configuration: resource-types.xml not found
+2020-10-19 15:02:40,418 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2020-10-19 15:02:40,477 INFO impl.YarnClientImpl: Submitted application application_1603111422479_0024
+2020-10-19 15:02:40,511 INFO mapreduce.Job: The url to track the job: http://im2ag-hadoop-01.u-ga.fr:8088/proxy/application_1603111422479_0024/
+2020-10-19 15:02:40,512 INFO mapreduce.Job: Running job: job_1603111422479_0024
+2020-10-19 15:02:52,620 INFO mapreduce.Job: Job job_1603111422479_0024 running in uber mode : false
+2020-10-19 15:02:52,622 INFO mapreduce.Job:  map 0% reduce 0%
+2020-10-19 15:02:58,741 INFO mapreduce.Job:  map 20% reduce 0%
+2020-10-19 15:03:00,752 INFO mapreduce.Job:  map 40% reduce 0%
+2020-10-19 15:03:01,757 INFO mapreduce.Job:  map 100% reduce 0%
+2020-10-19 15:03:05,784 INFO mapreduce.Job:  map 100% reduce 33%
+2020-10-19 15:03:06,789 INFO mapreduce.Job:  map 100% reduce 100%
+2020-10-19 15:03:06,803 INFO mapreduce.Job: Job job_1603111422479_0024 completed successfully
+2020-10-19 15:03:07,018 INFO mapreduce.Job: Counters: 55
+	File System Counters
+		FILE: Number of bytes read=4158314
+		FILE: Number of bytes written=10072991
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2536158
+		HDFS: Number of bytes written=623898
+		HDFS: Number of read operations=30
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=6
+	Job Counters 
+		Killed map tasks=1
+		Launched map tasks=5
+		Launched reduce tasks=3
+		Data-local map tasks=4
+		Rack-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=32166
+		Total time spent by all reduces in occupied slots (ms)=14268
+		Total time spent by all map tasks (ms)=32166
+		Total time spent by all reduce tasks (ms)=14268
+		Total vcore-milliseconds taken by all map tasks=32166
+		Total vcore-milliseconds taken by all reduce tasks=14268
+		Total megabyte-milliseconds taken by all map tasks=64332000
+		Total megabyte-milliseconds taken by all reduce tasks=28536000
+	Map-Reduce Framework
+		Map input records=52711
+		Map output records=409360
+		Map output bytes=3339576
+		Map output materialized bytes=4158386
+		Input split bytes=620
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=52554
+		Reduce shuffle bytes=4158386
+		Reduce input records=409360
+		Reduce output records=52554
+		Spilled Records=818720
+		Shuffled Maps =15
+		Failed Shuffles=0
+		Merged Map outputs=15
+		GC time elapsed (ms)=923
+		CPU time spent (ms)=13520
+		Physical memory (bytes) snapshot=2462515200
+		Virtual memory (bytes) snapshot=21040332800
+		Total committed heap usage (bytes)=2787115008
+		Peak Map Physical memory (bytes)=350388224
+		Peak Map Virtual memory (bytes)=2635542528
+		Peak Reduce Physical memory (bytes)=251400192
+		Peak Reduce Virtual memory (bytes)=2633281536
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=2535538
+	File Output Format Counters 
+		Bytes Written=623898
+2020-10-19 15:03:07,018 INFO streaming.StreamJob: Output directory: multi_reducer_wc

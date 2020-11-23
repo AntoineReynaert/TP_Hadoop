@@ -1,0 +1,1 @@
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-3.1.2.jar -files mapper.py,1jobReducer.py -mapper mapper.py -reducer 1jobReducer.py -input /data/flickr.txt -output result

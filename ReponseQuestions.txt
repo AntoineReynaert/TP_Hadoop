@@ -1,0 +1,2 @@
+nombre de splits lus sur hdfs :  5
+le fichier est découper en 5 et traiterent par 5 threads différents 
